@@ -11,8 +11,8 @@
             body {
                 background-image: url('playa.gif');
                 background-size: cover;
-                background-position: 0 -65%;
-                height: 10vh;
+                background-position: 0 40%;
+                /* height: 100vh; */
                 padding:0;
             }
             h1 {
@@ -39,8 +39,11 @@
                     opacity: 0;
                 }
             }
-            .tab {
-                display: inline-block;
+            @media (max-width: 800px) {
+                body {
+                    background-position: 0;
+                    height: 100vh;
+                }
             }
           </style>
     </head>
