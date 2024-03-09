@@ -1,0 +1,29 @@
+{
+  "name": "snkpt",
+  "version": "1.0.0",
+  "description": "snakepitrecs.com website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elauria/snkpt.git"
+  },
+  "keywords": [
+    "website",
+    "music",
+    "snakepitrecs.com",
+    "house",
+    "techno"
+  ],
+  "author": "Emanuel Lauria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elauria/snkpt/issues"
+  },
+  "homepage": "https://github.com/elauria/snkpt#readme",
+  "dependencies": {
+    "nes.css": "^2.3.0"
+  }
+}

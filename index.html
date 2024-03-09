@@ -1,28 +1,38 @@
-<html>
+<!DOCTYPE html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
         <style>
             @font-face { font-family: bithud; src: url('8-bit-hud.ttf'); } 
             @font-face { font-family: arcade-out; src: url('8-bit-arcade-out.ttf'); }
+            html, body, pre, code, kbd, samp {
+                font-family: "Press Start 2P";
+            }
             body {
                 /* background: #fdf5e6; */
                 background-image: url('playa.gif');
                 background-size: cover;
-                background-position: 0 -75%;
+                background-position: 0 -65%;
                 height: 10vh;
                 padding:0;
             }
             h4 {
-                font-size: 80px;
+                font-size: 96px;
                 font-family: arcade-out;
                 margin: 10;
             }
             h6,a {
-                font-family: bithud;
+                /* font-family: bithud; */
                 font-size: 10px;
                 margin: 20;
             }
             .center {
                 text-align: center;
+                width: 61%;
+                margin: auto;
+            }
+            .bg {
+                background: rgb(253,245,230, 0.5);
             }
             .blink_me {
                 animation: blinker 1s linear infinite;
@@ -37,9 +47,17 @@
     <body>
         <div class="center">
             <h4>snake pit records</h4>
-            <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">snakepitrecs.bandcamp.com</a><br/>
-            <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer">soundcloud.com/snakepitrecs</a></br/>
-            <h6>CONTACT: <span class="blink_me">snkpt(at)proton.me</span></h6>
+            <div class="nes-container with-title is-centered bg">
+                <p class="title">Contact</p>
+                <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">snakepitrecs.bandcamp.com</a><br/>
+                <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer">soundcloud.com/snakepitrecs</a></br/>
+                <br/>
+                <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
+                <a href="mailto:snkpt(at)proton.me?Subject=subject message" target="_blank" rel="noopener noreferrer"><i class="nes-icon gmail is-medium"></i></i></a>
+                <a href="https://youtube.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a><br/>
+                <br/>
+                <span class="blink_me">snkpt(at)proton.me</span>
+            </div> 
         </div>
 
     </body>
