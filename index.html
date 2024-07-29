@@ -22,19 +22,25 @@
             }
             .center {
                 text-align: center;
-                width: 61%;
+                width: 36%;
                 margin: auto;
-            }
-            .menu {
-                text-align: left;
-            }
-            .bg {
-                background: rgb(255,255,255, 1);
-                margin-top: 20%;
-                padding: 10%;
+                padding-top: 100px;
             }
             .blink_me {
                 animation: blinker 1s linear infinite;
+            }
+            .button {
+                background: rgb(230, 243, 255, 0.5);
+                height: '100px';
+                padding: 20px;
+                margin: 10px;
+            }
+            a {
+                color: purple;
+            }
+            a:hover {
+                color: white;
+                text-decoration: none;
             }
             @keyframes blinker {
                 50% {
@@ -57,17 +63,13 @@
         <title>SNKPT</title>
     </head>
     <body>
-        <div class="center">
-            <div class="nes-container is-centered bg">
-                <p>Hi! Snake Pit Records is an incoming label from Cancun, Mexico.</p>
-                <p>Follow us for more!</p>
-                <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">snakepitrecs.bandcamp.com</a><br/>
-                <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer">soundcloud.com/snakepitrecs</a></br/>
-                <br/>
-                <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
-                <a href="mailto:snkpt(at)proton.me?Subject=subject message"><i class="nes-icon gmail is-medium"></i></i></a>
-                <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a><br/>
-            </div> 
+        <div class="center">     
+            <!-- <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer"><div class="button">Bandcamp</div></a> -->
+            <div class="button">SNKPTRCS</div>
+            <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><div class="button"><img src="soundcloud.png" width="56px"><p>Soundcloud</p></div></a>
+            <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><div class="button"><i class="nes-icon instagram is-medium"></i><p>Instagram</p></div></a>
+            <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><div class="button"><i class="nes-icon youtube is-medium"></i><p>Youtube</p></div></a>
+            <a href="mailto:snkpt(at)proton.me?Subject=subject message"><div class="button"><i class="nes-icon gmail is-medium"></i><p>Contact</p></div></a>
         </div>
     </body>
 </html>
