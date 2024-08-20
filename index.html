@@ -22,34 +22,30 @@
                 padding-top: 100px;
                 padding-bottom: 80px;
             }
-            .center {
-                text-align: center;
-                width: 61%;
-                min-width: 600px;
-                max-width: 1000px;
-                margin: auto;
-                padding: 20px;
+            .container {
+                display: flex;
+                align-items: center; /* vertical centering if flex-direction: row */
+                justify-content: center; /* horizontal centering if flex-direction: row */
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
             }
             .logo {
-                width: 180px;
-                margin: auto;
-                margin-top: 25%;
+                min-width: 240px;
+                min-height: 240px;
+                background: url('snakepit_logo_square_small.png') no-repeat center center;
             }
             .label {
-                font-size: 23px;
-                margin-top: 180px;
+                font-size: 2em;
                 color: #fff;
                 text-shadow: 2px 2px #a2a2a2
             }
-            .blink_me {
-                animation: blinker 1s linear infinite;
-            }
-            .button {
-                height: '100px';
-                margin: 10px;
-                padding: 5px;
-                padding-top: 24px;
-                border-radius: 25px;
+            .links {
+                position: absolute;
+                bottom: 0;
             }
             a {
                 color: purple;
@@ -62,34 +58,29 @@
                 top: -18px;
                 position: relative;
             }
+            .blink_me {
+                animation: blinker 1s linear infinite;
+            }
             @keyframes blinker {
                 50% {
                     opacity: 0;
                 }
             }
-            /* @media (max-width: 1000px) {
-                html, body, pre, code, kbd, samp {
-                    font-size: 1.2em;
-                }
-                body {
-                    height: 100vh;
-                }
-                .center {
-                    width: 80%;
-                }
-            } */
           </style>
         <script async data-id="101450756" src="//static.getclicky.com/js"></script>        
         <title>SNKPT</title>
     </head>
     <body>
-        <div class="logo"><img src="snakepit_logo_square_small.png" width="180px"/><span class="label">SNKPTRCS</span></div>
-        <div class="center">     
+        <div class="container">
+            <div class="logo"></div>
+            <span class="label">SNKPTRCS</span>
+            <div class="links">     
             <!-- <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer"><div class="button">Bandcamp</div></a> -->
-            <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><img class="soundcloud" src="soundcloud.png" width="56px"></a>
-            <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
-            <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a>
-            <a href="mailto:snkpt(at)proton.me?Subject=subject message"><i class="nes-icon gmail is-medium"></i></a>
+                <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><img class="soundcloud" src="soundcloud.png" width="56px"></a>
+                <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
+                <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a>
+                <a href="mailto:snkpt(at)proton.me?Subject=subject message"><i class="nes-icon gmail is-medium"></i></a>
+            </div>
         </div>
     </body>
 </html>
