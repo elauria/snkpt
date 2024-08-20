@@ -28,12 +28,12 @@
                 min-width: 600px;
                 max-width: 1000px;
                 margin: auto;
-                padding-top: 100px;
+                padding: 20px;
             }
             .logo {
                 width: 180px;
                 margin: auto;
-                margin-bottom: 50px;
+                margin-top: 25%;
             }
             .label {
                 font-size: 23px;
@@ -45,7 +45,6 @@
                 animation: blinker 1s linear infinite;
             }
             .button {
-                background: rgb(230, 243, 255, 0.5);
                 height: '100px';
                 margin: 10px;
                 padding: 5px;
@@ -59,12 +58,16 @@
                 color: white;
                 text-decoration: none;
             }
+            .soundcloud {
+                top: -18px;
+                position: relative;
+            }
             @keyframes blinker {
                 50% {
                     opacity: 0;
                 }
             }
-            @media (max-width: 1000px) {
+            /* @media (max-width: 1000px) {
                 html, body, pre, code, kbd, samp {
                     font-size: 1.2em;
                 }
@@ -74,22 +77,19 @@
                 .center {
                     width: 80%;
                 }
-            }
+            } */
           </style>
         <script async data-id="101450756" src="//static.getclicky.com/js"></script>        
         <title>SNKPT</title>
     </head>
     <body>
+        <div class="logo"><img src="snakepit_logo_square_small.png" width="180px"/><span class="label">SNKPTRCS</span></div>
         <div class="center">     
             <!-- <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer"><div class="button">Bandcamp</div></a> -->
-            <div class="logo"><img src="snakepit_logo_square_small.png" width="180px"/><span class="label">SNKPTRCS</span></div>
-            <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><div class="button"><img src="soundcloud.png" width="56px"><p>Soundcloud</p></div></a>
-            <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><div class="button"><i class="nes-icon instagram is-medium"></i><p>Instagram</p></div></a>
-            <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><div class="button"><i class="nes-icon youtube is-medium"></i><p>Youtube</p></div></a>
-            <a href="mailto:snkpt(at)proton.me?Subject=subject message"><div class="button"><i class="nes-icon gmail is-medium"></i><p>Contact</p></div></a>
-            <div>
-                content
-            </div>
+            <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><img class="soundcloud" src="soundcloud.png" width="56px"></a>
+            <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
+            <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a>
+            <a href="mailto:snkpt(at)proton.me?Subject=subject message"><i class="nes-icon gmail is-medium"></i></a>
         </div>
     </body>
 </html>
