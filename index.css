@@ -30,7 +30,6 @@ body {
 .panel-header {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 30px;
 }
 .logo {
     width: 200px;
@@ -44,27 +43,36 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: silkscreen;
-    font-size: 45px;
-    color: white;
-    text-shadow: 1px 1px #000;
 }
 .site-name {
     line-height: 1;
     margin: 0;
-
+    font-family: silkscreen;
+    font-size: 54px;
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+.site-subtitle {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #999;
+    line-height: 1.2;
 }
 .separator {
     margin: 24px 0;
     height: 1px;
-    background: #aaa;
+    background: #eee;
     border: none;
+}
+.panel-menu {
+    text-align: right;
 }
 .panel-content {
     min-height: calc(100% - 320px);
 }
 .links {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.8;
 }
 .links a {
