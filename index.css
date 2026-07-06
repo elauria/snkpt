@@ -23,7 +23,7 @@ body {
     width: 800px;
     height: 100%;
     background: white;
-    color: #000;
+    color: #777;
     box-sizing: border-box;
     padding: 40px 30px 30px 30px;
 }
@@ -57,7 +57,7 @@ body {
 .separator {
     margin: 24px 0;
     height: 1px;
-    background: #000;
+    background: #aaa;
     border: none;
 }
 .panel-content {
