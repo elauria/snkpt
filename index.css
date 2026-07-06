@@ -1,58 +1,86 @@
 @font-face { font-family: silkscreen; src: url('Silkscreen-Regular.ttf'); }
 html, body, pre, code, kbd, samp {
     font-family: roboto mono, monospace;
-    background: url('playa.gif') no-repeat center center fixed; 
+    background: url('playa.gif') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 body {
-    padding:0;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
-h1 {
-    font-size: 5em;
-    font-family: silkscreen;
-}
-.container {
-    display: flex;
-    align-items: center; /* vertical centering if flex-direction: row */
-    justify-content: center; /* horizontal centering if flex-direction: row */
-    flex-direction: column;
+.panel {
     position: absolute;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
+    width: 800px;
+    height: 100%;
+    background: white;
+    color: #000;
+    box-sizing: border-box;
+    padding: 40px 30px 30px 30px;
+}
+.panel-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
 }
 .logo {
-    min-width: 240px;
-    min-height: 240px;
+    width: 200px;
+    height: 200px;
     background: url('snakepit_logo_square_small.png') no-repeat center center;
+    background-size: contain;
     background-color: #fff;
-    padding: 133px;
+    margin: 0 24px 0 0;
 }
-.label {
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: silkscreen;
     font-size: 45px;
-    color: #fff;
+    color: white;
     text-shadow: 1px 1px #000;
 }
+.site-name {
+    line-height: 1;
+    margin: 0;
+
+}
+.separator {
+    margin: 24px 0;
+    height: 1px;
+    background: #000;
+    border: none;
+}
+.panel-content {
+    min-height: calc(100% - 320px);
+}
 .links {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.links a {
+    color: #000;
+    text-decoration: none;
+}
+.links span {
+    margin: 0 10px;
+}
+.panel-footer {
     position: absolute;
-    bottom: 32px;
-}
-a {
-    color: white;
-}
-a:hover {
-    color: white;
-    /* text-decoration: none; */
-}
-.soundcloud {
-    top: -18px;
-    position: relative;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 .blink_me {
     animation: blinker 1s linear infinite;
