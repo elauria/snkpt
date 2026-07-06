@@ -2,79 +2,11 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
         <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
-        <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=2"> -->
         <link rel="manifest" href="site.webmanifest">        
-        <style>
-            @font-face { font-family: bithud; src: url('8-bit-hud.ttf'); } 
-            @font-face { font-family: arcade-out; src: url('8-bit-arcade-out.ttf'); }
-            html, body, pre, code, kbd, samp {
-                font-family: "Press Start 2P";
-                background: url('playa.gif') no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-            body {
-                padding:0;
-            }
-            h1 {
-                font-size: 5em;
-                font-family: arcade-out;
-                padding-top: 100px;
-                padding-bottom: 80px;
-            }
-            .container {
-                display: flex;
-                align-items: center; /* vertical centering if flex-direction: row */
-                justify-content: center; /* horizontal centering if flex-direction: row */
-                flex-direction: column;
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-            }
-            .logo {
-                min-width: 240px;
-                min-height: 240px;
-                background: url('snakepit_logo_square_small.png') no-repeat center center;
-                background-color: #fff;
-                padding: 133px;
-            }
-            .label {
-                font-size: 30px;
-                color: #fff;
-                text-shadow: 1px 1px #000;
-                margin-top: 5px;
-                margin-left: 5px;
-            }
-            .links {
-                position: absolute;
-                bottom: 32px;
-            }
-            a {
-                color: purple;
-            }
-            a:hover {
-                color: white;
-                text-decoration: none;
-            }
-            .soundcloud {
-                top: -18px;
-                position: relative;
-            }
-            .blink_me {
-                animation: blinker 1s linear infinite;
-            }
-            @keyframes blinker {
-                50% {
-                    opacity: 0;
-                }
-            }
-          </style>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=2">
         <script async data-id="101450756" src="//static.getclicky.com/js"></script>        
         <title>Snake Pit Records</title>
     </head>
@@ -83,13 +15,10 @@
             <div class="logo"></div>
             <span class="label">SNAKE-PIT</span>
             <span class="label">RECORDS</span>
-            <div class="links">     
-                <!-- <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer"><div class="button">Bandcamp</div></a>
-                <a href="https://soundcloud.com/snakepitrecs" target="_blank" rel="noopener noreferrer"><img class="soundcloud" src="soundcloud.png" width="60px"></a>
-                <a href="https://x.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon twitter is-medium"></i></a>
-                <a href="https://instagram.com/snakepit_mane" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-medium"></i></a>
-                <a href="https://www.youtube.com/@snkptrcs" target="_blank" rel="noopener noreferrer"><i class="nes-icon youtube is-medium"></i></a>
-                <a href="mailto:snkpt(at)proton.me?Subject=subject message"><i class="nes-icon gmail is-medium"></i></a> -->
+            <div class="links">
+                <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">bandcamp</a>
+                <span>&middot;</span>
+                <a href="mailto:mane(at)snakepitrecs.com?Subject=subject message">contact</a>
             </div>
         </div>
     </body>
