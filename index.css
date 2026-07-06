@@ -75,6 +75,9 @@ body {
 }
 .panel-content {
     min-height: calc(100% - 320px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .links {
     font-size: 1em;
@@ -92,9 +95,7 @@ body {
     left: auto;
     right: auto;
     bottom: auto;
-    font-size: 13px;
     line-height: 1.4;
-    padding-top: 20px;
 }
 .blink_me {
     animation: blinker 1s linear infinite;
