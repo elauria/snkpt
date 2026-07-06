@@ -1,31 +1,36 @@
 @font-face { font-family: silkscreen; src: url('Silkscreen-Regular.ttf'); }
 html, body, pre, code, kbd, samp {
     font-family: roboto mono, monospace;
-    background: url('playa.gif') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: none;
     font-size: 0.9em;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-body {
     margin: 0;
     padding: 0;
     min-height: 100%;
 }
+@media (min-width: 760px) {
+    html, body, pre, code, kbd, samp {
+        background: url('playa.gif') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+body {
+    min-height: 100%;
+}
 .panel {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
-    width: 800px;
-    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100vh;
     background: white;
     color: #777;
     box-sizing: border-box;
     padding: 40px 30px 30px 30px;
+    margin: 0 auto;
 }
 .panel-header {
     display: flex;
@@ -83,12 +88,13 @@ body {
     margin: 0 10px;
 }
 .panel-footer {
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
     font-size: 13px;
     line-height: 1.4;
+    padding-top: 20px;
 }
 .blink_me {
     animation: blinker 1s linear infinite;
@@ -96,5 +102,42 @@ body {
 @keyframes blinker {
     50% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .panel {
+        padding: 24px 18px 24px 18px;
+    }
+    .panel-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        width: 140px;
+        height: 140px;
+        margin: 0 0 18px 0;
+    }
+    .header-text {
+        align-items: center;
+        text-align: center;
+    }
+    .site-name {
+        font-size: 38px;
+    }
+    .site-subtitle {
+        margin-top: 14px;
+        margin-left: 0;
+        font-size: 0.95em;
+        max-width: 100%;
+    }
+    .panel-menu {
+        text-align: center;
+    }
+    .links {
+        font-size: 0.95em;
+    }
+    .panel-content {
+        min-height: auto;
     }
 }
