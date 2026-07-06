@@ -1,4 +1,4 @@
-@font-face { font-family: arcade-out; src: url('8-bit-arcade-out.ttf'); }
+@font-face { font-family: silkscreen; src: url('Silkscreen-Regular.ttf'); }
 html, body, pre, code, kbd, samp {
     font-family: roboto mono, monospace;
     background: url('playa.gif') no-repeat center center fixed; 
@@ -13,7 +13,7 @@ body {
 }
 h1 {
     font-size: 5em;
-    font-family: arcade-out;
+    font-family: silkscreen;
 }
 .container {
     display: flex;
@@ -34,12 +34,10 @@ h1 {
     padding: 133px;
 }
 .label {
-    font-family: "Press Start 2P";
-    font-size: 30px;
+    font-family: silkscreen;
+    font-size: 45px;
     color: #fff;
     text-shadow: 1px 1px #000;
-    margin-top: 5px;
-    margin-left: 5px;
 }
 .links {
     position: absolute;
