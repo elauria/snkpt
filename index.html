@@ -24,18 +24,61 @@
         </div>
         <div class="panel-menu bg-secondary">
             <div class="links">
+                <a href="#" class="nav-link active" data-view="home">home</a>
+                <span>&middot;</span>
                 <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">bandcamp</a>
+                <span>&middot;</span>
+                <a href="#" class="nav-link" data-view="artists">artists</a>
                 <span>&middot;</span>
                 <a href="mailto:mane(at)snakepitrecs.com?Subject=subject message">contact</a>
             </div>
         </div>
         <div class="panel-content">
-            <!-- Bandcamp Embed: SNKPTDGTL00-->
-            <iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=1155423911/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://snakepitrecs.bandcamp.com/album/the-fog-with-it">The Fog With It by Mane</a></iframe>
+            <section class="content-panel" id="home-panel">
+                <!-- Bandcamp Embed: SNKPTDGTL00-->
+                <iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=1155423911/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://snakepitrecs.bandcamp.com/album/the-fog-with-it">The Fog With It by Mane</a></iframe>
+            </section>
+            <section class="content-panel hidden" id="artists-panel" aria-labelledby="artist-name">
+                <article class="artist-profile container bg-secondary">
+                    <div class="artist-profile-header">
+                        <img class="artist-photo" src="mane.jpg" alt="Profile picture for mane">
+                        <div class="artist-profile-meta">
+                            <h2 id="artist-name">mane</h2>
+                            <p class="lead"><a href="https://www.instagram.com/mane_snakepit/" target="_blank" rel="noopener noreferrer">instagram</a><span>&middot;</span><a href="mailto:mane(at)snakepitrecs.com?Subject=subject message">mail</a></p>
+                        </div>
+                    </div>
+                    <div class="artist-section">
+                        <h3>Bio</h3>
+                        <p>Born and raised in the Mayan Paradise City, through and trhough Berlin Techno City found now in HEL. Soul in the Machine. Heaven in Hell. Pressing Life on WAX. No DAWn sun is just how I fELT.</p>
+                    </div>
+                </article>
+            </section>
         </div>
         <div class="panel-footer bg-secondary">
             Music property of Snake Pit Records
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.nav-link');
+            const panels = document.querySelectorAll('.content-panel');
+
+            links.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const target = this.getAttribute('data-view');
+
+                    links.forEach(function (item) {
+                        item.classList.toggle('active', item === link);
+                    });
+
+                    panels.forEach(function (panel) {
+                        const shouldShow = panel.id === target + '-panel';
+                        panel.classList.toggle('hidden', !shouldShow);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
