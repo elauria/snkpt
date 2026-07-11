@@ -26,9 +26,11 @@ h1 {
     right: 0;
     bottom: 0;
 }
-.logo {
+.logo-container {
     min-width: 240px;
     min-height: 240px;
+}
+.logo {
     background: url('snakepit_logo_square_small.png') no-repeat center center;
     background-color: #fff;
     padding: 133px;

@@ -1,0 +1,24 @@
+:root {
+    --bg: #000;
+    --fg: #fff;
+}
+#wrap {
+    margin: 24px;
+    background: var(--bg);
+}
+pre#art {
+    color: var(--fg);
+    margin: 0;
+    font-size: 9px;
+    line-height: 9px;
+    letter-spacing: 0px;
+    white-space: pre;
+    user-select: none;
+    text-shadow: 0 0 6px rgba(232,232,234,0.25);
+    /* background: var(--bg); */
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 300px) {
+    pre#art { font-size: 4px; line-height: 4px; }
+}
