@@ -1,0 +1,68 @@
+@font-face { font-family: arcade-out; src: url('8-bit-arcade-out.ttf'); }
+html, body, pre, code, kbd, samp {
+    font-family: roboto mono, monospace;
+    background: url('manebg.gif') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 1em;
+}
+body {
+    padding:0;
+}
+h1 {
+    font-size: 5em;
+    font-family: arcade-out;
+}
+.container {
+    display: flex;
+    align-items: center; /* vertical centering if flex-direction: row */
+    justify-content: center; /* horizontal centering if flex-direction: row */
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.logo-container {
+    min-width: 240px;
+    min-height: 240px;
+}
+.logo {
+    background: url('snakepit_logo_square_small.png') no-repeat center center;
+    background-color: #fff;
+    padding: 133px;
+}
+.label {
+    font-family: "Press Start 2P";
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.links {
+    position: absolute;
+    bottom: 32px;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: white;
+    /* text-decoration: none; */
+}
+.soundcloud {
+    top: -18px;
+    position: relative;
+}
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

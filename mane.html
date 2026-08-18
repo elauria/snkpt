@@ -1,32 +1,106 @@
 <!DOCTYPE html>
+<html>
     <head>
         <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
         <link rel="manifest" href="site.webmanifest">        
-        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <link rel="stylesheet" type="text/css" href="mane.css"/>
         <link rel="stylesheet" type="text/css" href="ascii.css"/>
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=2">
         <script async data-id="101450756" src="//static.getclicky.com/js"></script>        
         <title>Mane</title>
+        <style>
+            /* Bio panel: hidden by default, slides open by animating max-height */
+            #bio-panel {
+                max-height: 0;
+                overflow: hidden;
+                width: 100%;
+                transition: max-height 0.6s ease, opacity 0.5s ease, margin-top 0.6s ease;
+                opacity: 0;
+                margin-top: 0;
+                text-align: left;
+            }
+            #bio-panel.open {
+                max-height: 2000px; /* large enough to fit the bio text */
+                opacity: 1;
+                margin-top: 20px;
+            }
+            #bio-panel .bio-inner {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #ffffff;
+                color: #111111;
+                padding: 20px 20px 40px 20px;
+                display: flex;
+                justify-content: center;
+            }
+            #bio-panel .bio-text {
+                width: 100%;
+                max-width: 800px;
+            }
+            #bio-panel .bio-inner em {
+                font-style: italic;
+            }
+            #bio-panel .bio-inner p {
+                margin: 0 0 14px 0;
+                line-height: 1.6;
+            }
+            #bio-panel .bio-inner p:last-child {
+                margin-bottom: 0;
+            }
+            .bio-paragraph {
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            .links a#bio-link {
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <div class="logo-container">
+            <!-- <div class="logo-container">
                 <img src="mane.gif" width="270px" style="background-color:white;padding:20px"/>
             </div>
-            <span class="label">MANE</span>
+            <span class="label">MANE</span> -->
             <div class="links">
+                <a href="#bio" id="bio-link" rel="noreferrer">bio</a>
+                <span>&middot;</span>
                 <a href="https://instagram.com/mane_snakepit" target="_blank" rel="noopener noreferrer">instagram</a>
                 <span>&middot;</span>
                 <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">bandcamp</a>
                 <span>&middot;</span>
                 <a href="https://drive.google.com/drive/folders/1xfVkgt0fHSvUEuV-IlZmhEF0IQBImMOZ" target="_blank" rel="noopener noreferrer">gallery</a>
                 <span>&middot;</span>
-                <a href="https://drive.google.com/drive/folders/1GZdz5CYb3wUdblMHr0DpSqROvgDBLfg1" target="_blank" rel="noopener noreferrer">press kit</a>
-                <span>&middot;</span>
                 <a href="mailto:mane(at)snakepitrecs.com?Subject=subject message">contact</a>
             </div>
+
+            <div id="bio-panel">
+                <div class="bio-inner">
+                    <div class="bio-text">
+                        <p class="bio-paragraph">Helsinki-based, Berlin-raised and Mexican born. Yearly guest of Mexico's beloved <em>Sunday Sunday</em>, former resident of Berlin's <em>Pantheon Bar Collective</em> and today's Helsinki nightlife.</p>
+                        <hr/>
+                        <p>As a young resident of Mexico's <em>Club Aura</em>, he opened for names like Matias Aguayo, Magda, Stephan Bodzin, Andre Kraml &amp; many more. Becoming a proper reference in the Mexican electronic scene, forged a deep-running connection to Berlin's underground soon after.</p>
+                        <p>Part of Berlin's nightlife fabric as a resident of <em>The Pantheon Bar Collective</em>, he was behind the decks in abandoned and unconventional spaces with a Funktion-One rig and a pair of 1200s, from the top of <em>Teufelsberg</em> to the bridges where <em>Else</em> would later emerge. His Berlin years saw sets at <em>Sisyphos</em>, <em>Farbfernseher</em>, <em>Prince Charles</em>, <em>Rummelsbucht</em> &amp; more, alongside a residency at <em>Bar Mysliwska</em>.</p>
+                        <p>In Helsinki, he's found a new home without skipping the rills. Appearances at <em>Stidila</em> and <em>Tavastia</em> sit alongside a steady presence in the city's smaller rooms and bars — co-running an Acid House night at <em>Bar Tÿpo</em> or playing soulful sets to listen to, he still carries the instinct that shaped him in Berlin.</p>
+                        <p>Releases through Mexico's <em>Short Attention Records</em> and Berlin's <em>KK</em> label, keep him real from the studio to the dancefloor. A Detroit ethos stalwart: soul over ego, feeling over perfection. Music as a spiritual thing, always in search of that moment when the mix brings the room into one.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <script>
+            const bioLink = document.getElementById('bio-link');
+            const bioPanel = document.getElementById('bio-panel');
+
+            bioLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                bioPanel.classList.toggle('open');
+                if (bioPanel.classList.contains('open')) {
+                    bioPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        </script>
     </body>
 </html>
