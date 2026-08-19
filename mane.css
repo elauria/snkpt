@@ -16,10 +16,6 @@ body {
     padding: 0;
     margin: 0;
 }
-h1 {
-    font-size: 5em;
-    font-family: arcade-out;
-}
 .container {
     height: 100vh;
     height: 100svh;
@@ -39,7 +35,7 @@ h1 {
 }
 .label {
     font-family: "Press Start 2P";
-    font-size: 30px;
+    font-size: 2em;
     color: #fff;
     text-shadow: 1px 1px #000;
     display: block;
