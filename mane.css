@@ -9,23 +9,24 @@ html, body, pre, code, kbd, samp {
     background-size: cover;
     font-size: 1em;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
-    padding:0;
+    padding: 0;
+    margin: 0;
 }
 h1 {
     font-size: 5em;
     font-family: arcade-out;
 }
 .container {
-    display: flex;
-    align-items: center; /* vertical centering if flex-direction: row */
-    justify-content: center; /* horizontal centering if flex-direction: row */
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    height: 100vh;
+    height: 100svh;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 50vh;
+    padding-top: 50svh;
 }
 .logo-container {
     min-width: 240px;
@@ -41,12 +42,21 @@ h1 {
     font-size: 30px;
     color: #fff;
     text-shadow: 1px 1px #000;
-    margin-top: 5px;
-    margin-left: 5px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 .links {
-    position: absolute;
+    position: fixed;
+    left: 0;
+    right: 0;
     bottom: 32px;
+    text-align: center;
+    z-index: 1;
 }
 a {
     color: white;

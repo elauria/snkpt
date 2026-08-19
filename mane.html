@@ -9,22 +9,63 @@
         <script async data-id="101450756" src="//static.getclicky.com/js"></script>        
         <title>Mane</title>
         <style>
-            /* Bio panel: hidden by default, slides open by animating max-height */
-            #bio-panel {
-                max-height: 0;
-                overflow: hidden;
+            #bio {
                 width: 100%;
-                transition: max-height 0.6s ease, opacity 0.5s ease, margin-top 0.6s ease;
-                opacity: 0;
-                margin-top: 0;
                 text-align: left;
             }
-            #bio-panel.open {
-                max-height: 2000px; /* large enough to fit the bio text */
-                opacity: 1;
-                margin-top: 20px;
+            #bio .bio-inner {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #ffffff;
+                color: #111111;
+                padding: 40px 40px 80px 40px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                z-index: 3;
             }
-            #bio-panel .bio-inner {
+            #bio .bio-text {
+                width: 100%;
+                max-width: 800px;
+            }
+            #bio .bio-inner em {
+                font-style: italic;
+            }
+            #bio .bio-text a {
+                color: #111111;
+                text-decoration: underline;
+            }
+            #bio .bio-inner p {
+                margin: 0 0 14px 0;
+                line-height: 1.6;
+            }
+            #bio .bio-inner p:last-child {
+                margin-bottom: 0;
+            }
+            .bio-paragraph {
+                font-weight: bold;
+                font-size: 1.3em;
+                margin-bottom:20px;
+            }
+            .links a#bio-link,
+            .links a#gallery-link {
+                cursor: pointer;
+            }
+            .scene-gap {
+                height: calc(32px + 1.25em + 16px);
+                pointer-events: none;
+                scroll-margin-top: calc(100vh - 32px - 1.25em - 16px);
+                scroll-margin-top: calc(100svh - 32px - 1.25em - 16px);
+            }
+            #gallery {
+                display: none;
+                width: 100%;
+                position: relative;
+                z-index: 3;
+                scroll-margin-top: calc(50vh + 24px);
+                scroll-margin-top: calc(50svh + 24px);
+            }
+            #gallery .gallery-inner {
                 width: 100%;
                 box-sizing: border-box;
                 background-color: #ffffff;
@@ -33,31 +74,21 @@
                 display: flex;
                 justify-content: center;
             }
-            #bio-panel .bio-text {
+            #gallery .gallery-content {
                 width: 100%;
                 max-width: 800px;
             }
-            #bio-panel .bio-inner em {
-                font-style: italic;
+            #gallery .gallery-content h2 {
+                font-family: "Press Start 2P";
+                font-size: 16px;
+                font-weight: normal;
+                margin: 0 0 24px 0;
             }
-            #bio-panel .bio-text a {
-                color: #111111;
-                text-decoration: underline;
-            }
-            #bio-panel .bio-inner p {
-                margin: 0 0 14px 0;
-                line-height: 1.6;
-            }
-            #bio-panel .bio-inner p:last-child {
-                margin-bottom: 0;
-            }
-            .bio-paragraph {
-                font-weight: bold;
-                font-size: 1.3em;
-                margin-bottom:20px;
-            }
-            .links a#bio-link {
-                cursor: pointer;
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 16px;
+                min-height: 240px;
             }
         </style>
     </head>
@@ -68,41 +99,48 @@
             </div> -->
             <span class="label">MANE</span>
             <div class="links">
-                <a href="#bio" id="bio-link" rel="noreferrer">bio</a>
+                <a href="#bio-end" id="bio-link" rel="noreferrer">bio</a>
+                <span>&middot;</span>
+                <a href="https://drive.google.com/drive/folders/1xfVkgt0fHSvUEuV-IlZmhEF0IQBImMOZ?usp=sharing" id="gallery-link" rel="noreferrer" target="_blank">gallery</a>
                 <span>&middot;</span>
                 <a href="https://instagram.com/mane_snakepit" target="_blank" rel="noopener noreferrer">instagram</a>
                 <span>&middot;</span>
                 <a href="https://snakepitrecs.bandcamp.com" target="_blank" rel="noopener noreferrer">bandcamp</a>
                 <span>&middot;</span>
-                <a href="https://drive.google.com/drive/folders/1xfVkgt0fHSvUEuV-IlZmhEF0IQBImMOZ" target="_blank" rel="noopener noreferrer">gallery</a>
-                <span>&middot;</span>
                 <a href="mailto:mane(at)snakepitrecs.com?Subject=subject message">contact</a>
             </div>
+        </div>
 
-            <div id="bio-panel">
-                <div class="bio-inner">
-                    <div class="bio-text">
-                        <p class="bio-paragraph">Helsinki-based, Berlin-forged and Mexican born. Yearly guest of Mexico's beloved <em>Sunday Sunday</em>, former resident of Berlin's Pantheon Bar collective and today Helsinki's upcoming selector.</p>
-                        <hr/>
-                        <p>As a young resident of Mexico's club <em>Aura</em>, he opened for artists like Matias Aguayo, Magda, Stephan Bodzin, Andre Kraml &amp; many more. Becoming a proper reference in the Mexican house music scene and forging a deep-running connection to Berlin's underground soon after.</p>
-                        <p>Part of Berlin's nightlife fabric as a resident of <em>The Pantheon Bar Collective</em>, he was behind the decks in <s>illegal</s> abandoned and unconventional spaces with a Funktion-One rig and a pair of 1200s, from the top of <a href="https://soundcloud.com/thepantheonbar/manes-techno-set-teufelsberg-tpb-rave-2014" target="_blank"><em>Teufelsberg</em></a> to the bridge where <em>Else</em> would later emerge. His Berlin years saw sets at <em>Sisyphos</em>, <em>Farbfernseher</em>, <em>Prince Charles</em>, <em>Rummelsbucht</em>, <em>Brunnen70</em> &amp; more, alongside a residency at <em>Bar Mysliwska</em>.</p>
-                        <p>In Helsinki, he's found a new home without skipping the rills. Appearances at strongholds like <a href="https://soundcloud.com/ollikoponen/stidila-30-5-2025-mane-olli-koponen" target="_blank"><em>Stidila</em></a> and <em>Tavastia</em> sit alongside a steady presence in the city's smaller rooms and bars — co-running an <a href="https://soundcloud.com/ollikoponen/typo-loves-the-acid-20-02-2026" target="_blank">Acid House night</a> at <em>Bar Tÿpo</em> or playing soulful sets just to listen to.</p>
-                        <p>Releases through mexican <a href="https://soundcloud.com/short-attention/sad002" target="_blank"><em>Short Attention Records</em></a> and Berlin's <em>KK</em> label, keep him real from the studio to the dancefloor. A Detroit ethos stalwart: soul over ego, feeling over perfection. Music as a spiritual thing, always in search of that moment when the mix makes the room feel like one.</p>
-                    </div>
+        <div id="bio">
+            <div class="bio-inner">
+                <div class="bio-text">
+                    <p class="bio-paragraph">Helsinki-based, Berlin-forged and Mexican born. Yearly guest of Mexico's beloved <em>Sunday Sunday</em>, former resident of Berlin's Pantheon Bar collective and today Helsinki's upcoming selector.</p>
+                    <hr/>
+                    <p>As a young resident of Mexico's club <em>Aura</em>, he opened for artists like Matias Aguayo, Magda, Stephan Bodzin, Andre Kraml &amp; many more. Becoming a proper reference in the Mexican house music scene and forging a deep-running connection to Berlin's underground soon after.</p>
+                    <p>Part of Berlin's nightlife fabric as a resident of <em>The Pantheon Bar Collective</em>, he was behind the decks in <s>illegal</s> abandoned and unconventional spaces with a Funktion-One rig and a pair of 1200s, from the top of <a href="https://soundcloud.com/thepantheonbar/manes-techno-set-teufelsberg-tpb-rave-2014" target="_blank"><em>Teufelsberg</em></a> to the bridge where <em>Else</em> would later emerge. His Berlin years saw sets at <em>Sisyphos</em>, <em>Farbfernseher</em>, <em>Paloma Bar</em>, <em>Prince Charles</em>, <em>Rummelsbucht</em>, <em>Brunnen70</em> &amp; more, alongside a residency at <em>Bar Mysliwska</em>.</p>
+                    <p>In Helsinki, he's found a new home without skipping the rills. Appearances at strongholds like <a href="https://soundcloud.com/ollikoponen/stidila-30-5-2025-mane-olli-koponen" target="_blank"><em>Stidila</em></a> and <em>Tavastia</em> sit alongside a steady presence in the city's smaller rooms and bars — co-running an <a href="https://soundcloud.com/ollikoponen/typo-loves-the-acid-20-02-2026" target="_blank">Acid House night</a> at <em>Bar Tÿpo</em> or playing soulful sets just to listen to.</p>
+                    <p>Releases through mexican <a href="https://soundcloud.com/short-attention/sad002" target="_blank"><em>Short Attention Records</em></a> and Berlin's <em>KK</em> label, keep him real from the studio to the dancefloor. A Detroit ethos stalwart: soul over ego, feeling over perfection. Music as a spiritual thing, always in search of that moment when the mix makes the room feel like one.</p>
                 </div>
             </div>
         </div>
 
-        <script>
-            const bioLink = document.getElementById('bio-link');
-            const bioPanel = document.getElementById('bio-panel');
+        <div class="scene-gap" id="bio-end" aria-hidden="true"></div>
 
-            bioLink.addEventListener('click', function (e) {
+        <div id="gallery">
+            <div class="gallery-inner">
+                <div class="gallery-content">
+                    <h2>gallery</h2>
+                    <div class="gallery-grid"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('bio-link').addEventListener('click', function (e) {
                 e.preventDefault();
-                bioPanel.classList.toggle('open');
-                if (bioPanel.classList.contains('open')) {
-                    bioPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
+                document.getElementById('bio-end').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'end'
+                });
             });
         </script>
     </body>
