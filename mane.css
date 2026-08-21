@@ -7,7 +7,7 @@ html, body, pre, code, kbd, samp {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 html {
     scroll-behavior: smooth;
